@@ -26,7 +26,7 @@ def polishing_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    pokemon = pd.read_csv('./data/pokemon.csv')
+    pokemon = pd.read_csv('../data/pokemon.csv')
 
     type_cols = ['type_1','type_2']
     non_type_cols = pokemon.columns.difference(type_cols)
