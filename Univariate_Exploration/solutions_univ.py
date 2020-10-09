@@ -19,7 +19,7 @@ def bar_chart_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    pokemon = pd.read_csv('./data/pokemon.csv')
+    pokemon = pd.read_csv('../data/pokemon.csv')
 
     base_color = sb.color_palette()[0]
     sb.countplot(data = pokemon, x = 'generation_id', color = base_color)
@@ -38,7 +38,7 @@ def bar_chart_solution_2():
     print((" ").join(sol_string))
 
     # data setup
-    pokemon = pd.read_csv('./data/pokemon.csv')
+    pokemon = pd.read_csv('../data/pokemon.csv')
     pkmn_types = pokemon.melt(id_vars = ['id','species'], 
                           value_vars = ['type_1', 'type_2'], 
                           var_name = 'type_level', value_name = 'type').dropna()
@@ -76,7 +76,7 @@ def histogram_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    pokemon = pd.read_csv('./data/pokemon.csv')
+    pokemon = pd.read_csv('../data/pokemon.csv')
 
     bins = np.arange(20, pokemon['special-defense'].max()+5, 5)
     plt.hist(pokemon['special-defense'], bins = bins)
@@ -94,7 +94,7 @@ def scales_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    pokemon = pd.read_csv('./data/pokemon.csv')
+    pokemon = pd.read_csv('../data/pokemon.csv')
 
     bins = np.arange(0, pokemon['height'].max()+0.2, 0.2)
     plt.hist(data = pokemon, x = 'height', bins = bins)
@@ -112,7 +112,7 @@ def scales_solution_2():
     print((" ").join(sol_string))
 
     # data setup
-    pokemon = pd.read_csv('./data/pokemon.csv')
+    pokemon = pd.read_csv('../data/pokemon.csv')
 
     bins = 10 ** np.arange(-1, 3.0+0.1, 0.1)
     ticks = [0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000]

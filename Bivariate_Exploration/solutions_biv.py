@@ -26,7 +26,7 @@ def scatterplot_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    fuel_econ = pd.read_csv('./data/fuel_econ.csv')
+    fuel_econ = pd.read_csv('../data/fuel_econ.csv')
 
     plt.scatter(data = fuel_econ, x = 'city', y = 'highway', alpha = 1/8)
     # plt.plot([10,60], [10,60]) # diagonal line from (10,10) to (60,60)
@@ -48,7 +48,7 @@ def scatterplot_solution_2():
     print((" ").join(sol_string))
 
     # data setup
-    fuel_econ = pd.read_csv('./data/fuel_econ.csv')
+    fuel_econ = pd.read_csv('../data/fuel_econ.csv')
 
     bins_x = np.arange(0.6, fuel_econ['displ'].max()+0.4, 0.4)
     bins_y = np.arange(0, fuel_econ['co2'].max()+50, 50)
@@ -75,7 +75,7 @@ def violinbox_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    fuel_econ = pd.read_csv('./data/fuel_econ.csv')
+    fuel_econ = pd.read_csv('../data/fuel_econ.csv')
 
     sedan_classes = ['Minicompact Cars', 'Subcompact Cars', 'Compact Cars', 'Midsize Cars', 'Large Cars']
     pd_ver = pd.__version__.split(".")
@@ -108,7 +108,7 @@ def categorical_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    fuel_econ = pd.read_csv('./data/fuel_econ.csv')
+    fuel_econ = pd.read_csv('../data/fuel_econ.csv')
     
     sedan_classes = ['Minicompact Cars', 'Subcompact Cars', 'Compact Cars', 'Midsize Cars', 'Large Cars']
     pd_ver = pd.__version__.split(".")
@@ -145,7 +145,7 @@ def additionalplot_solution_1():
     print((" ").join(sol_string))
 
     # data setup
-    fuel_econ = pd.read_csv('./data/fuel_econ.csv')
+    fuel_econ = pd.read_csv('../data/fuel_econ.csv')
 
     most_makes = fuel_econ['make'].value_counts().index[:18]
     fuel_econ_sub = fuel_econ.loc[fuel_econ['make'].isin(most_makes)]
@@ -173,7 +173,7 @@ def additionalplot_solution_2():
     print((" ").join(sol_string))
 
     # data setup
-    fuel_econ = pd.read_csv('./data/fuel_econ.csv')
+    fuel_econ = pd.read_csv('../data/fuel_econ.csv')
 
     most_makes = fuel_econ['make'].value_counts().index[:18]
     fuel_econ_sub = fuel_econ.loc[fuel_econ['make'].isin(most_makes)]
